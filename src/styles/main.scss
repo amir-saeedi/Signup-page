@@ -1,0 +1,176 @@
+* {
+  margin: 0;
+  padding: 0;
+  border: none;
+  box-sizing: border-box;
+}
+body {
+  background: #fdfdfd;
+  overflow-x: hidden;
+}
+a {
+  text-decoration: none;
+  color: #000;
+}
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+.btn {
+  display: block;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  gap: 30px;
+  border-radius: 30px;
+  padding: 10px 0;
+  margin: 2.75rem 0 0 0;
+  background: #fff;
+  color: #333;
+  border: none;
+  &:hover {
+    border: none;
+    outline: none;
+  }
+}
+.container {
+  position: relative;
+  border-radius: 20px;
+  margin: 0 auto;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  padding: 0;
+}
+.main {
+  padding-top: 25%;
+  display: flex;
+  flex-direction: column;
+  z-index: 10;
+}
+.back-page {
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  background: #078282;
+  .back-page_arrow {
+    color: #fff;
+  }
+}
+// form style
+.form-group {
+  box-shadow: 0.2px 1px #999;
+  text-align: start;
+  padding-left: 10px;
+  .form-control {
+    display: inline;
+    width: auto;
+    background: transparent;
+    border: none;
+    font-size: 1rem;
+    outline: none;
+  }
+  .form-control:focus {
+    outline: none;
+    border: none;
+    background: transparent;
+    box-shadow: none;
+  }
+  .form-icon {
+    border-right: 1px #c0bebe solid;
+    padding-right: 5px;
+    font-size: 18px;
+    color: #333;
+  }
+  .form-icon-showPas {
+    border-right: none;
+    margin-right: 10px;
+  }
+  .valid-feedback {
+    text-align: end;
+    padding-right: 45px;
+  }
+}
+.form-btn {
+  margin: 10px 0 20px -1rem;
+  width: 112%;
+  background: #078282;
+  color: #fff;
+}
+// div (OR) style
+.or-style {
+  position: relative;
+  width: 100%;
+  height: 0;
+  border-bottom: #078282 1px solid;
+  &::before {
+    content: "";
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: #fff;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  &::after {
+    content: "OR";
+    text-align: center;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #fff;
+    border: 1px solid #078282;
+    color: #078282;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+// foter style
+.footer a,
+.footer a:hover {
+  color: #078282;
+}
+.btn-signup {
+  box-shadow: 15px 15px 30px #d9d9d9, -15px -15px 30px #ffffff;
+  svg {
+    width: 30%;
+    font-size: 25px;
+    margin-left: 10px;
+  }
+  span {
+    width: 100%;
+  }
+}
+// title images style
+.image-title1 {
+  position: absolute;
+  z-index: 2;
+  top: 5px;
+}
+.image-title2 {
+  position: absolute;
+  z-index: 2;
+  opacity: 1;
+  top: 0px;
+}
