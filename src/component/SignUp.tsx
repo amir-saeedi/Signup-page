@@ -68,9 +68,11 @@ export default function SignUp() {
   return (
     <Container>
       <div className="main">
-        <div className="back-page">
-          <FaArrowLeft className="back-page_arrow" color="#fff" />
-        </div>
+        <Link to="/">
+          <div className="back-page">
+            <FaArrowLeft className="back-page_arrow" color="#fff" />
+          </div>
+        </Link>
         <div className="m-3">
           <div className="text-start mb-5">
             <h2 className="mb-3">Sign up</h2>

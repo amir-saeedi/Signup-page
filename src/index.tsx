@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./styles/main.scss";
 import { UserProvider, UserInterface } from "./context/user";
+const MainPage = React.lazy(() => import("./component/MainPage"));
 const SignUp = React.lazy(() => import("./component/SignUp"));
 
 function App() {
@@ -14,9 +15,12 @@ function App() {
   return (
     <Router>
       <UserProvider value={{ user, setUser }}>
-        <Routes>
-          <Route path="/" element={<SignUp />} />
-        </Routes>
+        <React.Suspense fallback={"loading!"}>
+          <Routes>
+            <Route path="/" element={<MainPage />} />
+            <Route path="/signup" element={<SignUp />} />
+          </Routes>
+        </React.Suspense>
       </UserProvider>
     </Router>
   );
